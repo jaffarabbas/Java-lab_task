@@ -66,7 +66,6 @@ class PSLteams
         else{
             MatchesLost++;
             NoOfMatchesPlayed++;
-
         }
     }
 
