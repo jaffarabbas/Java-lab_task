@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(java:*)",
+      "Bash(echo:*)",
+      "Bash(where.exe:*)",
+      "Bash(Get-Command javac -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object -ExpandProperty Source)",
+      "Bash(export PATH=\"/c/Program Files/Java/jdk-25/bin:$PATH\":*)",
+      "Bash(javac:*)",
+      "Bash(~/.bashrc)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

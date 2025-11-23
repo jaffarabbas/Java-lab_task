@@ -9,6 +9,38 @@ class Main{
     public static int partition(int[] arr, int low , int high){
         int pivot = arr[low];
         int i = low;
+        for(int j = low + 1 ; j <= high ; j++){
+            if(arr[j] < pivot){
+                i++;
+                swap(arr, i , j);
+            }
+        }
+        swap(arr, low , i);
+        return i;
+    }
+    public static int partitionWithTwoPointers(int[] arr, int low , int high){
+        int pivot = arr[low];
+        int i = low + 1;
+        int j = high;
+        while(i <= j){
+            while(i <= high && arr[i] < pivot){
+                i++;
+            }
+            while(j >= low && arr[j] > pivot){
+                j--;
+            }
+            if(i < j){
+                swap(arr, i , j);
+                i++;
+                j--;
+            }
+        }
+        swap(arr, low , j);
+        return j;
+    }
+    public static int partitionWithPrint(int[] arr, int low , int high){
+        int pivot = arr[low];
+        int i = low;
         System.out.println("Pivot: " + pivot);
         System.out.println("Low: " + low + ", High: " + high);
         System.out.println("Array State: ");
